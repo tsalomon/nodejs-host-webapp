@@ -6,15 +6,16 @@ var path = require('path');
 // set the public folder to serve public assets
 app.use(express.static(__dirname + '/public'));
 
-// set up our one route to the index.html file
+// setup alt route for website
 app.get('/website', function(req, res) {
 	res.sendFile(path.join(__dirname + '/public/index.html'));
 });
-
+// route for gcal publisher app
 app.get('/gapi', function(req, res) {
-	res.sendFile(path.join(__dirname + '/public/gapi.html'));
+	res.sendFile(path.join(__dirname + '/public/gcal_publisher/gapi.html'));
 });
 
+//default to the website
 app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname + '/public/index.html'));
 });
