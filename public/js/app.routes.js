@@ -6,7 +6,7 @@ angular.module('routerRoutes', ['ngRoute'])
 	$routeProvider
 	
 		// route for the home page
-		.when('/', {
+		.when('/home', {
 		templateUrl : 'views/pages/home.html',
 		controller : 'homeController',
 		controllerAs: 'home'
