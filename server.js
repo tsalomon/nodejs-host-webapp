@@ -7,7 +7,7 @@ var path = require('path');
 app.use(express.static(__dirname + '/public'));
 
 // setup alt route for website
-app.get('/website', function(req, res) {
+app.get('/site', function(req, res) {
 	res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 // route for gcal publisher app
