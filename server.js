@@ -7,9 +7,14 @@ var path = require('path');
 app.use(express.static(__dirname + '/public'));
 
 // set up our one route to the index.html file
-app.get('*', function(req, res) {
+app.get('/website', function(req, res) {
 	res.sendFile(path.join(__dirname + '/public/views/index.html'));
 });
+
+app.get('/gapi', function(req, res) {
+	res.sendFile(path.join(__dirname + '/public/views/gapi.html'));
+});
+
 
 // start the server on port 8080 (http://localhost:8080)
 app.listen(process.env.PORT || 8080);
