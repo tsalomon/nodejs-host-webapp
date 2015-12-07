@@ -1,2 +1,2 @@
 # nodejs-webapp
-A Node.js web application
+A Node.js web server for hosting projects on Heroku
