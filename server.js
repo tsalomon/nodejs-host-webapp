@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 
 // setup alt route for website
 app.get('/site', function(req, res) {
-	res.sendFile(path.join(__dirname + '/public/index.html'));
+	res.sendFile(path.join(__dirname + '/public/website1/index.html'));
 });
 // route for gcal publisher app
 app.get('/gapi', function(req, res) {
@@ -17,7 +17,7 @@ app.get('/gapi', function(req, res) {
 
 //default to the website
 app.get('*', function(req, res) {
-	res.sendFile(path.join(__dirname + '/public/index.html'));
+	res.sendFile(path.join(__dirname + '/public/website1/index.html'));
 });
 
 
