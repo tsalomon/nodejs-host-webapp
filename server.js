@@ -5,6 +5,7 @@ var path = require('path');
 
 // set the public folder to serve public assets
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/website1'));
 
 // setup alt route for website
 app.get('/site', function(req, res) {
