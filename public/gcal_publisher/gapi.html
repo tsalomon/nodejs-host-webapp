@@ -54,9 +54,8 @@
        * once client library is loaded.
        */
       function loadCalendarApi() {
-        gapi.client.load('calendar', 'v3', listUpcomingEvents);
-        gapi.client.load('calendar', 'v3', createEvent);
-        
+        //gapi.client.load('calendar', 'v3', listUpcomingEvents);
+        createEvent();
       }
 
       /**
@@ -102,7 +101,7 @@
       }
       
       function createEvent() {
-      
+       gapi.client.load('calendar', 'v3', function() {
         var event = {
           'summary': 'test test test',
           'start': {
@@ -126,6 +125,7 @@
         request.execute(function(event) {
           appendPre('Event created: ' + event.htmlLink);
         });
+       });
         
       }
       
