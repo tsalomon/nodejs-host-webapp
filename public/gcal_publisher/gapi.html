@@ -55,7 +55,8 @@
        */
       function loadCalendarApi() {
         gapi.client.load('calendar', 'v3', listUpcomingEvents);
-        createEvent();
+        gapi.client.load('calendar', 'v3', createEvent);
+        
       }
 
       /**
