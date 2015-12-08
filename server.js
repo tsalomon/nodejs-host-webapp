@@ -16,10 +16,11 @@ app.get('/gapi', function(req, res) {
 });
 
 //default to the website
+/*
 app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname + '/public/website1/index.html'));
 });
-
+*/
 
 
 // start the server on port 8080 (http://localhost:8080)
