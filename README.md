@@ -1,11 +1,9 @@
 # nodejs-webapp
 A Node.js web server for hosting projects on Heroku
 
-Hosted Projects:
-
-Personal Website : [site]
-
-Google Calendar Course Publisher : tsalomon.herokuapp.com/gpub
-
+Current Hosted Projects:
+[Personal Website][site]
+[GoogCal Course Publisher][gpub]
 
 [site]: <https://tsalomon.herokuapp.com>
+[gpub]: <https:// tsalomon.herokuapp.com/gpub>
