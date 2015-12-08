@@ -6,4 +6,4 @@ Current Hosted Projects:
 [GoogCal Course Publisher][gpub]
 
 [site]: <https://tsalomon.herokuapp.com>
-[gpub]: <https:// tsalomon.herokuapp.com/gpub>
+[gpub]: <https://tsalomon.herokuapp.com/gpub>
