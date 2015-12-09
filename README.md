@@ -1,8 +1,5 @@
 # nodejs-webapp
-# Hosting personal projects through Heroku
 A Node.js web server for hosting projects on Heroku
-
-Current Hosted Projects:
 
 [Personal Website][site]
 
