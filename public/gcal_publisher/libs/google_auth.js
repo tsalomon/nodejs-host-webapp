@@ -27,6 +27,7 @@
 	  
 	  //call functions here;
 	  createEvent();
+    console.log(courses);
 		
 	} else {
 	  // Show auth UI, allowing the user to initiate authorization by
@@ -47,29 +48,7 @@
 	return false;
   }
   
-  function createEvent() {
-   gapi.client.load('calendar', 'v3', function() {
-	var resource = {
-	  "summary": "Appointment",
-	  "location": "Somewhere",
-	  "start": {
-		"dateTime": "2016-1-1T10:00:00.000-07:00"
-	  },
-	  "end": {
-		"dateTime": "2016-1-1T10:25:00.000-07:00"
-	  }
-	};
-	var request = gapi.client.calendar.events.insert({
-	  'calendarId': 'primary',
-	  'resource': resource
-	});
-	
-	request.execute(function(event) {
-	  appendPre('Event created: ' + event.htmlLink);
-	});
-   });
-	
-  }
+
   
 
   /**
