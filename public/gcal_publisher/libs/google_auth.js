@@ -27,7 +27,6 @@
 	  
 	  //call functions here;
 	  createEvent();
-    console.log(courses);
 		
 	} else {
 	  // Show auth UI, allowing the user to initiate authorization by
