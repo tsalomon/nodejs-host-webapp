@@ -18,7 +18,7 @@ app.get('/gapi', function(req, res) {
 	res.sendFile(path.join(__dirname + '/public/gcal_publisher/gapi.html'));
 });
 app.get('/gpub', function(req, res) {
-	res.sendFile(path.join(__dirname + '/public/gcal_publisher/gapi.html'));
+	res.sendFile(path.join(__dirname + '/public/gcal_publisher/index.html'));
 });
 
 //default to the website

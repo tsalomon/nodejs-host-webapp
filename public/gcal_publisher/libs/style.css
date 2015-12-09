@@ -1,0 +1,88 @@
+/* All parents of container should be 100% */
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+.left {
+	height: 100%
+}
+
+.right {
+	height: 100%
+}
+
+
+/*
+ footer{
+ position:absolute;
+ bottom:0;
+ width:100%;
+ background-color: #555;
+ height:60px;
+ border: 1px solid black;
+
+ }
+ */
+ 
+.noscroll {
+	overflow: hidden;
+}
+.scroll {
+	overflow-y: scroll;
+}
+
+.fullh {
+	height: 100%;
+}
+
+#top {
+	background-color: #555;
+	color: white;
+	padding: 5px;
+	height: 5%;
+	height: 45px;
+}
+
+#top h2 {
+	
+	margin-bottom:0px;
+}
+
+
+
+#content {
+	min-height: 80% !important;
+	height: 90% !important;
+	/*border: 4px solid red;*/
+}
+
+#bottom {
+
+	height: 5%;
+	height: 40px;
+	
+}
+.vcentre {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.delete_course:hover{
+	
+	color:#C9302C;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 5px;
+}

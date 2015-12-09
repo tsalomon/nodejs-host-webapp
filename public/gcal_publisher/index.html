@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head>
+
+  <title>Course Proj</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap & jQuery & Moment-->
+  <script src="./libs/jquery-2.1.4.js"></script>
+  <script src="./libs/bootstrap/js/bootstrap.js"></script>
+  <!--<script src="./libs/moment.js"></script>-->
+  
+  <!-- Scripts -->
+  <script type="text/javascript" src="./libs/scripts.js" ></script>
+  <!--<script src="./libs/jquery-ui/jquery-ui.js"></script>-->
+  <script type="text/javascript" src="./libs/datepicker/js/bootstrap-datepicker.js" ></script>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./libs/style.css"> 
+  <!--<link href="./libs/jquery-ui/jquery-ui.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="./libs/datepicker/css/datepicker.css">
+  
+</head>
+<!-- END OF HEAD -->
+
+<!-- BODY -->
+<body>
+<div class="container-fluid fullh">  
+
+<div class="row" id="top">
+	
+	
+	
+	<div class="col-sm-12" id="logo">
+		<h2 style="display:inline;">GCal Course Publisher</h2>
+		<button type="button" class="btn btn-primary" onclick="" style="display:inline; float:right">Publish</button>
+			
+	</div>
+	
+</div>
+
+        
+
+
+<div class="row scroll" style="" id="content" >
+  <div class="col-sm-1" id="">
+	
+  </div>
+  
+  <div class="col-sm-10"> 
+  
+	 <div class="content" id="course_content" style="margin-top:20px;">
+
+		<div class="panel-group" id="accordion">
+		<div class="input-group" style="width:100%">
+		   <input type="text" class="form-control" id="courseInput" value="Example Course" placeholder="Course Name">
+		   <span class="input-group-btn">
+		        <button class="btn btn-primary" onclick="newCourse()">Add Course</button>
+		   </span>
+		</div>
+		
+		<div class="panel panel-default" id="course_example">
+		  <div class="panel-heading">
+			<h1 class="panel-title">
+				<a data-toggle="collapse" href="#collapse0" style="">Clone Course</a>
+		
+					<span class="delete_course glyphicon glyphicon-remove-sign" style="display:inline; float:right; " onclick="deleteCourse(this.parentNode.parentNode.parentNode)"></span>
+					
+			</h1>
+			
+		  </div>
+		  <div id="" class="panel-collapse collapse in">
+			<div class="panel-body">
+		
+				<div id="assign0-0" class="assignment">
+				
+					<div class="input-group" style="margin-bottom:2px;">
+						 <input type = "text" class = "form-control" placeholder="Name">
+						 <span class = "input-group-addon"></span>
+						 <input type = "text" class = "form-control dp" placeholder="Date" data-date-format="yyyy-mm-dd">
+						 <span class = "input-group-addon"></span>
+						 <input type = "text" class = "form-control" placeholder="Weight">
+						 <span class="input-group-btn">
+							<button type="button" class="btn btn-danger" onclick="deleteAssignment(this.parentNode.parentNode.parentNode)" style="border-bottom-right-radius: 4px; border-top-right-radius: 4px;">
+								<span class="glyphicon glyphicon-remove-sign"></span>
+							</button>
+						 <span>
+					</div>
+
+				</div>
+		
+				
+
+				
+				<button id="newassign" class="btn btn-info js-scroll-to" type="button" onclick="newAssignment(this.parentNode)" >
+					<span class="glyphicon glyphicon-plus-sign"> Assignment</span>
+				</button>	
+			  		  
+
+
+			</div>
+		  
+
+		  </div>
+		  
+		  		  
+
+		</div>
+
+		</div> 
+
+	 </div>
+
+	<h3>Data Dump</h3>
+	<div class="jumbotron" id="display">
+	</div>
+	
+	
+	<!--
+	<button class="btn btn-inverse" onclick="getCourseTitles()">Titles</button>
+	-->
+	<button class="btn btn-inverse" onclick="getCourseElements(); display()">Refresh</button>
+  </div>
+	
+  <div class="col-sm-1 right">
+   
+  </div>
+</div>
+
+
+<div class="row"  id="bottom">
+	<footer class="text-center">
+	  <p>Timothy Salomonsson &copy; 2015 </p>
+	</footer>
+</div>
+
+</div>
+
+</body>
+<!-- END OF BODY -->
+
+</html>
