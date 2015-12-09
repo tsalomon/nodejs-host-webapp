@@ -319,11 +319,11 @@ var getCourseElements = function(){
 
 
 
-  function createEvent(course) {
+  function createEventB() {
    gapi.client.load('calendar', 'v3', function() {
      
      
-    console.log(courses);
+    console.log("Creating event.");
      
      
     var resource = {
@@ -345,6 +345,22 @@ var getCourseElements = function(){
       appendPre('Event created: ' + event.htmlLink);
     });
    });
+	
+  }
+  
+  function createEvent(summ, desc, start, end) {
+    apprendPre("Created new assignment event.");
+    
+    var resource = {
+      "summary": sum,
+      "description": desc,
+      "start": {
+      "date": start;
+      },
+      "end": {
+      "date": end;
+      }
+    };
 	
   }
 
