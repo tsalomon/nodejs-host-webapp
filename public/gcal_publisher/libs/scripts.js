@@ -140,8 +140,8 @@ $("document").ready(function() {
   
   
   var inputs = $("#assign0-0").find("input");
-  for(input in inputs){
-      input.val("");
+  for(i=0; i< inputs.length; i++){
+      inputs.eq(i).val("");
   }
   
   $("#courseInput").val("");
@@ -180,8 +180,8 @@ var newAssignment = function(assignBody) {
   
   //clear input fields after cloning
   var inputs = $(newAssign).find("input");
-  for(input in inputs){
-      input.val("");
+  for(i=0; i< inputs.length; i++){
+      inputs.eq(i).val("");
   }
   
   
