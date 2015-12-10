@@ -68,12 +68,12 @@ var display = function() {
 
 var numCourses = 0;
 
-var newCourse = function() {
+var newCourse = function(title) {
 
 	numCourses++;
 
 	//get course name from input
-	var cName = $("#courseInput").val();
+	var cName = title;
 
 	if (!/\S/.test(cName)) {
 		// string is empty or just whitespace
@@ -140,7 +140,9 @@ $("document").ready(function() {
   $("#courseInput").val("");
   //clear the course name field
   $("#addCourseButton").mouseup(function(){
+      newCourse($("#courseInput").val());
       $("#courseInput").val("");
+      
       
   });
 	
