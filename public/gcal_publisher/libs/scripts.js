@@ -426,15 +426,14 @@ var getCourseElements = function(){
 	    
       
 	    request.execute(function(resp) {
-        var eventlink = document.createElement("a")
+        var eventlink = document.createElement("a");
         eventlink.href = resp.htmlLink;
         eventlink.innerHTML = resp.htmlLink;
-        //var pre = document.getElementById("output");
+        var pre = document.getElementById("output");
         var disp = document.getElementById("display");
-	      appendPre('Assignment added:' + " ");
+	      appendPre('Assignment "'+ resource.summary +'" added:' );
         disp.appendChild(eventlink)
-	      appendPre('Assignment ID: ' + resp.id);
-
+        pre.appendChild(eventlink)
 	    });
 	
     });
