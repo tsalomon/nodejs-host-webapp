@@ -402,8 +402,9 @@ var getCourseElements = function(){
 	      'resource': resource
 	    });
 	    
+      
 	    request.execute(function(resp) {
-	      var response = resp;
+	    response = resp;
 	      appendPre('Assignment added: ' + resp.htmlLink);
 	      appendPre('Assignment ID: ' + resp.id);
 
