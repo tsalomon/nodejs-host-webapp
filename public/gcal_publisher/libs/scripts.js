@@ -276,7 +276,7 @@ var getCourseElements = function(){
 	var authButton = document.getElementById('authorize-button');
 	if (authResult && !authResult.error) {
 	  // Hide auth UI, then load client library.
-	  $(authorizeButton).hide();
+	  $(authButton).hide();
 	  
 	  var i=0;
 	  
@@ -295,7 +295,7 @@ var getCourseElements = function(){
 	} else {
 	  // Show auth UI, allowing the user to initiate authorization by
 	  // clicking authorize button.
-	  $(authorizeButton).show();
+	  $(authButton).show();
 	}
   }
   
