@@ -295,7 +295,7 @@ var getCourseElements = function(){
 	} else {
 	  // Show auth UI, allowing the user to initiate authorization by
 	  // clicking authorize button.
-	  $(authorizeButton).show();';
+	  $(authorizeButton).show();
 	}
   }
   
