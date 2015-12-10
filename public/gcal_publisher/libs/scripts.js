@@ -137,10 +137,10 @@ $("document").ready(function() {
 	});
 	*/
   
-  $("#courseInput").text("");
+  $("#courseInput").val("");
   //clear the course name field
   $("#addCourseButton").mouseup(function(){
-      $("#courseInput").text("");
+      $("#courseInput").val("");
       
   });
 	
