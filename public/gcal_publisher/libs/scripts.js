@@ -392,7 +392,7 @@ var getCourseElements = function(){
     };
     
     
-    var response;
+
     
     //load library and send request
     gapi.client.load('calendar', 'v3', function() {
@@ -404,7 +404,6 @@ var getCourseElements = function(){
 	    
       
 	    request.execute(function(resp) {
-	    response = resp;
 	      appendPre('Assignment added: ' + resp.htmlLink);
 	      appendPre('Assignment ID: ' + resp.id);
 
@@ -412,9 +411,9 @@ var getCourseElements = function(){
 	
     });
 
-    appendPre("Created new assignment event.");
+    //appendPre("Created new assignment event.");
     
-    return response.id;
+    
   }
 
 
