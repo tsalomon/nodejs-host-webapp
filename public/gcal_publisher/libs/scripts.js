@@ -280,10 +280,12 @@ var getCourseElements = function(){
 	  
 	  var i=0;
 	  
-	  summ = courses[i].assigns[i].name;
-	  description = courses[i].name + " " + courses[i].assigns[i].weight;
-	  start = courses[i].assigns[i].date;
-	  end = courses[i].assigns[i].date
+	  console.log(JSON.stringify(courses));
+	  
+	  var summ = courses[i].assigns[i].name;
+	  var description = courses[i].name + " " + courses[i].assigns[i].weight;
+	  var start = courses[i].assigns[i].date;
+	  var end = courses[i].assigns[i].date;
 	  
 	  //call functions here
 	  createEvent(summ, description, start, end);
