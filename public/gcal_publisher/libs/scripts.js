@@ -90,7 +90,7 @@ var newCourse = function(title) {
 	//remove the display none from the copied, hidden example course
 	
 	
-	accordion.first().before(newCourse);
+	accordion.first().after(newCourse);
 	
 
 	//find the heading of the new course
