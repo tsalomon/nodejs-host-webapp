@@ -273,13 +273,14 @@ var getCourseElements = function(){
    * @param {Object} authResult Authorization result.
    */
   function handleAuthResult(authResult) {
-	var authorizeDiv = document.getElementById('authorize-div');
+	var authButton = document.getElementById('authorize-button');
 	if (authResult && !authResult.error) {
 	  // Hide auth UI, then load client library.
-	  authorizeDiv.style.display = 'none';
+	  $(authorizeButton).hide();
 	  
 	  var i=0;
 	  
+    getCourseElements(); 
 	  console.log(JSON.stringify(courses));
 	  
 	  var summ = courses[i].assigns[i].name;
@@ -294,7 +295,7 @@ var getCourseElements = function(){
 	} else {
 	  // Show auth UI, allowing the user to initiate authorization by
 	  // clicking authorize button.
-	  authorizeDiv.style.display = 'inline';
+	  $(authorizeButton).show();';
 	}
   }
   
@@ -377,7 +378,7 @@ var getCourseElements = function(){
   
   
   function createEvent(summ, desc, start, end) {
-    apprendPre("Created new assignment event.");
+    appendPre("Created new assignment event.");
     
     var resource = {
       "summary": sum,
