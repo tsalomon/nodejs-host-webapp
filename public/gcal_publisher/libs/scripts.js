@@ -138,7 +138,7 @@ $("document").ready(function() {
 	*/
   
   //clear the course name field
-  $("#courseInput").onclick(function(){
+  $("#courseInput").mouseup(function(){
       this.clear();
       
   });
