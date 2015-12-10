@@ -90,7 +90,7 @@ var newCourse = function(title) {
 	//remove the display none from the copied, hidden example course
 	
 	
-	accordion.first().append(newCourse);
+	accordion.first().before(newCourse);
 	
 
 	//find the heading of the new course
@@ -170,6 +170,14 @@ var newAssignment = function(assignBody) {
 
 	var newAssign = exampleAssign.cloneNode(true);
 	newAssign.id = "";
+  
+  //clear input fields after cloning
+  var inputs = $(newAssign).find("input");
+  for input in inputs{
+      input.val("");
+  }
+  
+  
 	var insertPlace = $(assignBody).children().last();
 	$(newAssign).insertBefore(insertPlace)
 	$( ".dp" ).datepicker();
