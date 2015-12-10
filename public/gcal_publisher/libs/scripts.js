@@ -407,9 +407,10 @@ var getCourseElements = function(){
         var eventlink = document.createElement("a")
         eventlink.href = resp.htmlLink;
         eventlink.innerHTML = resp.htmlLink;
-        var pre = document.getElementById("output");
+        //var pre = document.getElementById("output");
+        var disp = document.getElementById("display");
 	      appendPre('Assignment added:' + " ");
-        pre.appendChild(eventlink)
+        disp.appendChild(eventlink)
 	      appendPre('Assignment ID: ' + resp.id);
 
 	    });
