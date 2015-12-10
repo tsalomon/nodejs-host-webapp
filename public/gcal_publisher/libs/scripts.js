@@ -136,12 +136,16 @@ $("document").ready(function() {
 	  });
 	});
 	*/
+  
+  //clear the course name field
+  $("#courseInput").onclick(function{
+      this.clear();
+      
+  });
 	
-	newCourse();
+ 
 	$( ".dp" ).datepicker();
-	
-	$(".dp").mousedown(function(){
-		$(".dp").datepicker('hide');
+  $(".dp").datepicker('hide');
 	});
 	
 
