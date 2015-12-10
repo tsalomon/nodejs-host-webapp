@@ -278,8 +278,16 @@ var getCourseElements = function(){
 	  // Hide auth UI, then load client library.
 	  authorizeDiv.style.display = 'none';
 	  
-	  //call functions here;
-	  createEvent();
+	  var i=0;
+	  
+	  summ = courses[i].assigns[i].name;
+	  description = courses[i].name + " " + courses[i].assigns[i].weight;
+	  start = courses[i].assigns[i].date;
+	  end = courses[i].assigns[i].date
+	  
+	  //call functions here
+	  createEvent(summ, description, start, end);
+	  //createEventB();
 		
 	} else {
 	  // Show auth UI, allowing the user to initiate authorization by
@@ -348,6 +356,24 @@ var getCourseElements = function(){
 	
   }
   
+  
+  /*
+  
+  	characters allowed in the ID are those used in base32hex encoding, 
+  	i.e. lowercase letters a-v and digits 0-9, see section 3.1.2 in RFC2938
+	the length of the ID must be between 5 and 1024 characters
+	the ID must be unique per calendar
+  
+  */
+  
+  // not an actual UUID generator
+  //just for for eventual event clearing and publish undos
+  var uuid_counter = 0;
+  function generateUUID(){
+  	uuid_counter++;
+  }
+  
+  
   function createEvent(summ, desc, start, end) {
     apprendPre("Created new assignment event.");
     
@@ -355,13 +381,34 @@ var getCourseElements = function(){
       "summary": sum,
       "description": desc,
       "start": {
-      "date": start;
+      "date": start
       },
       "end": {
-      "date": end;
+      "date": end
       }
     };
+    
+    
+    var response;
+    
+    //load library and send request
+    gapi.client.load('calendar', 'v3', function() {
+    
+	    var request = gapi.client.calendar.events.insert({
+	      'calendarId': 'primary',
+	      'resource': resource
+	    });
+	    
+	    request.execute(function(resp) {
+	      var response = resp;
+	      appendPre('Assignment added: ' + resp.htmlLink);
+	      appendPre('Assignment ID: ' + resp.id);
+
+	    });
 	
+    });
+
+    return response.id;
   }
 
 
