@@ -144,6 +144,8 @@ $("document").ready(function() {
       inputs.eq(i).val("");
   }
   
+  newCourse("Example Course");
+  
   $("#courseInput").val("");
   //clear the course name field
   $("#addCourseButton").mouseup(function(){
