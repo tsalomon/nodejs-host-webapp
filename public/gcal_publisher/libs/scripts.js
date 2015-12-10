@@ -378,10 +378,10 @@ var getCourseElements = function(){
   
   
   function createEvent(summ, desc, start, end) {
-    appendPre("Created new assignment event.");
+    
     
     var resource = {
-      "summary": sum,
+      "summary": summ,
       "description": desc,
       "start": {
       "date": start
@@ -411,6 +411,8 @@ var getCourseElements = function(){
 	
     });
 
+    appendPre("Created new assignment event.");
+    
     return response.id;
   }
 
