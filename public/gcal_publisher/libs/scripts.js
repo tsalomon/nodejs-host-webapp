@@ -137,6 +137,13 @@ $("document").ready(function() {
 	});
 	*/
   
+  
+  
+  var inputs = $("#assign0-0").find("input");
+  for(input in inputs){
+      input.val("");
+  }
+  
   $("#courseInput").val("");
   //clear the course name field
   $("#addCourseButton").mouseup(function(){
@@ -173,7 +180,7 @@ var newAssignment = function(assignBody) {
   
   //clear input fields after cloning
   var inputs = $(newAssign).find("input");
-  for input in inputs{
+  for(input in inputs){
       input.val("");
   }
   
