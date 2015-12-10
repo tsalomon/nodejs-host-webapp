@@ -404,7 +404,12 @@ var getCourseElements = function(){
 	    
       
 	    request.execute(function(resp) {
-	      appendPre('Assignment added: ' + resp.htmlLink);
+        var eventlink = document.createElement("a")
+        eventlink.href = resp.htmlLink;
+        eventlink.innerHTML = resp.htmlLink;
+        var pre = document.getElementById("output");
+	      appendPre('Assignment added:' + " ");
+        pre.appendChild(eventlink)
 	      appendPre('Assignment ID: ' + resp.id);
 
 	    });
