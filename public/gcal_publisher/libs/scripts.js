@@ -144,8 +144,8 @@ $("document").ready(function() {
   });
 	
  
-	$( ".dp" ).datepicker();
-  $(".dp").datepicker('hide');
+	$(".dp").mousedown(function(){
+		$(".dp").datepicker('hide');
 	});
 	
 
